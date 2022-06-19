@@ -14,8 +14,7 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var trueButton : Button
     private lateinit var falseButton : Button
-    private lateinit var nextButton : ImageButton
-    private lateinit var prevButton : ImageButton
+    private lateinit var nextButton : Button
     private lateinit var questionTextView: TextView
 
     private val questionBank = listOf(
@@ -35,7 +34,6 @@ class MainActivity : AppCompatActivity() {
         trueButton = findViewById(R.id.true_button)
         falseButton = findViewById(R.id.false_button)
         nextButton = findViewById(R.id.next_button)
-        prevButton = findViewById(R.id.prev_button)
         questionTextView = findViewById(R.id.question_text_view)
         // listeners
         trueButton.setOnClickListener {view : View ->
@@ -51,11 +49,6 @@ class MainActivity : AppCompatActivity() {
             updateQuestion()
         }
 
-        prevButton.setOnClickListener {
-            if (currentIndex == 0) currentIndex = questionBank.size
-            currentIndex -= 1
-            updateQuestion()
-        }
 
         questionTextView.setOnClickListener {
             currentIndex = (currentIndex + 1) % questionBank.size
