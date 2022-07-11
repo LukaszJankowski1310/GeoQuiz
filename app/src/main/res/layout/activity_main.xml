@@ -11,7 +11,12 @@
         android:layout_height="wrap_content"
         android:padding="24dp"
         android:gravity="center"
+        android:textSize="16sp"
         tools:text="@string/question_australia" />
+
+
+
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -48,6 +53,15 @@
         android:drawableEnd="@drawable/arrow_right"
         android:drawablePadding="4dp"/>
 
+
+    <TextView
+        android:id="@+id/number_cheats_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="24dp"
+        android:gravity="bottom"
+        tools:text="@string/number_cheats"
+        android:textSize="16sp"/>
 
 
 </LinearLayout>
